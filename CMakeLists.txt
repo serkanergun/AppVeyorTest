@@ -16,6 +16,7 @@ set(APPVEYORTEST_LICENSE LGPL )
 
 include(Common)
 common_package(Boost REQUIRED COMPONENTS unit_test_framework
+                                         system
                                          filesystem)
 common_package_post()
 
