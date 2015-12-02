@@ -2,8 +2,6 @@ version: 1.0.{build}
 os: Visual Studio 2015
 platform: 
   - x64
-build:
-  verbosity: minimal
 configuration:
   - Debug
   - Release
@@ -18,4 +16,4 @@ before_build:
 build:
   project: C:\projects\dart\build\AppVeyorTest.sln # path to Visual Studio solution or project
   parallel: true                           # enable MSBuild parallel builds
-  verbosity: quiet                         # MSBuild verbosity level (quiet|minimal|normal|detailed)
+  verbosity: normal                         # MSBuild verbosity level (quiet|minimal|normal|detailed)
