@@ -20,3 +20,6 @@ build:
   project: C:\projects\AppVeyorTest\build\AppVeyorTest.sln # path to Visual Studio solution or project
   parallel: true                           # enable MSBuild parallel builds
   verbosity: normal                         # MSBuild verbosity level (quiet|minimal|normal|detailed)
+test_script:
+  - cmd: ctest -C Release -VV
+  - cmd: ctest -C Debug -VV
