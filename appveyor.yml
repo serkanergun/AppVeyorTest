@@ -1,0 +1,21 @@
+version: 1.0.{build}
+os: Visual Studio 2015
+platform: 
+  - x64
+build:
+  verbosity: minimal
+configuration:
+  - Debug
+  - Release
+clone_folder:
+  - c:\projects\AppVeyorTest
+before_build:
+  - cmd: cd C:\projects\AppVeyorTest
+  - cmd: md build
+  - cmd: cd build
+  - cmd: set CMAKE_GENERATOR_NAME=Visual Studio 14 Win64
+  - cmd: cmake -G "%CMAKE_GENERATOR_NAME%" -DCMAKE_BUILD_TYPE=%configuration% ..
+build:
+  project: C:\projects\dart\build\AppVeyorTest.sln # path to Visual Studio solution or project
+  parallel: true                           # enable MSBuild parallel builds
+  verbosity: quiet                         # MSBuild verbosity level (quiet|minimal|normal|detailed)
