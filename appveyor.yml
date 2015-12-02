@@ -5,8 +5,8 @@ platform:
 configuration:
   - Debug
   - Release
-clone_folder:
-  - c:\projects\AppVeyorTest
+clone_folder: c:\projects\AppVeyorTest
+
 before_build:
   - cmd: cd C:\projects\AppVeyorTest
   - cmd: md build
