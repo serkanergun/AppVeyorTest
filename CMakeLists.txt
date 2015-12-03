@@ -18,7 +18,10 @@ include(Common)
 common_package(Boost REQUIRED COMPONENTS unit_test_framework
                                          system
                                          filesystem)
+common_package(Eigen3 REQUIRED)
 common_package_post()
+
+include_directories(${Eigen3_INCLUDE_DIR} ${OGLPLUS_INCLUDE_DIR})
 
 add_subdirectory(example)
 add_subdirectory(tests)
