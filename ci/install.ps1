@@ -9,7 +9,7 @@ function InstallPrerequisites($uri, $msi)
   Invoke-WebRequest $uri -OutFile $msi
 
   $install_command = "msiexec.exe"
-  $install_args    = "/qn /log log.txt /i $msi"
+  $install_args    = "/quiet /norestart /qn /log log.txt /i $msi"
   ExecuteCommand $install_command $install_args
 }
 
