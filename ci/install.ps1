@@ -1,7 +1,7 @@
 function ExecuteCommand($command, $command_args)
 {
   Write-Host $command $command_args
-  Start-Process -FilePath $command -ArgumentList $command_args -Wait -Passthru
+  Start-Process -FilePath $command -ArgumentList $command_args -Wait
 }
 
 function InstallPrerequisites($uri, $msi)
@@ -19,7 +19,7 @@ function main()
   {
     $old_dir = $pwd
     cd "C:/projects"
-    InstallPrerequisites "http://sourceforge.net/projects/cppcheck/files/cppcheck/1.71/cppcheck-1.71-x64-Setup.msi/download" "cppcheck.msi" "C:/cppcheck"
+    InstallPrerequisites "http://sourceforge.net/projects/cppcheck/files/cppcheck/1.71/cppcheck-1.71-x64-Setup.msi/download" "c:\projects\cppcheck.msi" 
     cd $old_dir
   }
   catch
