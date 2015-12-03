@@ -12,9 +12,9 @@ clone_folder: c:\projects\AppVeyorTest
 install:
   - set PATH=C:\Libraries\boost_1_59_0\lib64-msvc-14.0;%PATH%
   - ps: Start-FileDownload http://sourceforge.net/projects/cppcheck/files/cppcheck/1.71/cppcheck-1.71-x64-Setup.msi/download
-  - ps: msiexec /i cppcheck-1.71-x64-Setup.msi /quiet /qn /norestart /log install.log
+  - ps: msiexec /i download\cppcheck-1.71-x64-Setup.msi /quiet /qn /norestart /log install.log
   - ps: dir
-  - ps: Get-Content install.log
+  - ps: Get-Content download\install.log
 before_build:
   - cmd: cd C:\projects\AppVeyorTest
   - cmd: md build
