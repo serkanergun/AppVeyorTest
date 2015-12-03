@@ -27,5 +27,5 @@ build:
   parallel: true                           # enable MSBuild parallel builds
   verbosity: normal                         # MSBuild verbosity level (quiet|minimal|normal|detailed)
 test_script:
-  - cmd: cd C:\projects\AppVeyorTest\build
-  - cmd: msbuild AppVeyorTest.sln /target:RUN_TESTS /p:Configuration=%configuration%
+  - cmd: cd C:\projects\AppVeyorTest\build\tests
+  - cmd: msbuild RUN_TESTS.vcxproj /p:Configuration=%configuration%
