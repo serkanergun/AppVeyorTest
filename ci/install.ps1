@@ -11,11 +11,13 @@ function main()
     $old_dir = $pwd
 
 	If (!(Test-Path -Path $depFolder)){
+	  Write-Host "Creating Folder: $deps"
 	  New-Item -ItemType directory -Path $depFolder | Out-Null
 	}
     cd $depFolder
     foreach ($depend in $depends.GetEnumerator()) {
       If (!(Test-Path "$depFolder\$($depend.Name).msi")){
+	    Write-Host "Downloading $($depend.Name)"
         (new-object net.webclient).DownloadFile($($depend.Value), "$depFolder\$($depend.Name).msi")
       }
       Write-Host "Installing $($depend.Name)"
