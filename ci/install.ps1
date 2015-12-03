@@ -19,7 +19,7 @@ function main()
   {
     $old_dir = $pwd
     cd "C:/projects"
-    InstallPrerequisites "http://sourceforge.net/projects/cppcheck/files/cppcheck/1.71/cppcheck-1.71-x64-Setup.msi/download" "c:\projects\cppcheck.msi" 
+    InstallPrerequisites "http://sourceforge.net/projects/cppcheck/files/cppcheck/1.71/cppcheck-1.71-x64-Setup.msi/download" "cppcheck.msi" 
     cd $old_dir
   }
   catch
