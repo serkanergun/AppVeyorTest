@@ -6,7 +6,7 @@ function ExecuteCommand($command, $command_args)
 
 function InstallPrerequisites($uri, $msi)
 {
-  Invoke-WebRequest $uri -OutFile $msi
+  (new-object net.webclient).DownloadFile($uri, "c:\projects\$msi")
 
   $install_command = "msiexec.exe"
   $install_args    = "/quiet /norestart /qn /L*V! log.txt /i $msi"
