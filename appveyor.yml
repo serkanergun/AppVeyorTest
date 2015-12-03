@@ -14,7 +14,7 @@ install:
   - ps: cd C:\projects\AppVeyorTest\ci
   - ps: .\install.ps1
   - ps: cd c:\projects
-  - ps: dir
+  - ps: Get-Content log.txt
 before_build:
   - cmd: cd C:\projects\AppVeyorTest
   - cmd: md build
