@@ -28,6 +28,7 @@ function main()
     $depends = @{
       "cppcheck" = @("msi", "http://downloads.sourceforge.net/project/cppcheck/cppcheck/1.71/cppcheck-1.71-x64-Setup.msi?r=&ts=1449135605&use_mirror=skylink")
 	  "Eigen" = @("zip", "http://bitbucket.org/eigen/eigen/get/3.2.7.zip", ".")
+	  "AssImp" = @("zip", "http://sourceforge.net/projects/assimp/files/assimp-3.1/assimp-3.1.1-win-binaries.zip/download",".")
     }
 
     $old_dir = $pwd
