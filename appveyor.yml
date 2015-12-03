@@ -9,7 +9,8 @@ configuration:
   - Debug
   - Release
 clone_folder: c:\projects\AppVeyorTest
-
+install:
+  - set PATH=C:\Libraries\boost_1_59_0\lib64-msvc-14.0;%PATH%
 before_build:
   - cmd: cd C:\projects\AppVeyorTest
   - cmd: md build
