@@ -11,7 +11,7 @@ function main()
     $old_dir = $pwd
 
 	If (!(Test-Path -Path $depFolder)){
-	  Write-Host "Creating Folder: $deps"
+	  Write-Host "Creating Folder: $depFolder"
 	  New-Item -ItemType directory -Path $depFolder | Out-Null
 	}
     cd $depFolder
