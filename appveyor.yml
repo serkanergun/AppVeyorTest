@@ -13,6 +13,8 @@ install:
   - set PATH=C:\Libraries\boost_1_59_0\lib64-msvc-14.0;%PATH%
   - ps: cd C:\projects\AppVeyorTest\ci
   - ps: .\install.ps1
+  - ps: cd c:\projects
+  - ps: dir
 before_build:
   - cmd: cd C:\projects\AppVeyorTest
   - cmd: md build
